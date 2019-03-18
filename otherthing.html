@@ -12,7 +12,7 @@ var who2 = [ ["agent", 0],  ["fixer", 0],  ["assistant", 1],  ["manager", 0],  [
 var wherec = [ ["corp tower", 2],  ["corp laboratory", 2],  ["military base", 1],  ["corp factory", 0],  ["residential arcology", 1],  ["gated community", 2],  ["nightlife scene", 0],  ["sleepy suburb", 1] ];
 var wheres = [ ["access hub", -1],  ["cartel zone", 1],  ["black market", -1],  ["gang turf", 2],  ["decrepit slum", 0],  ["combat zone", 2],  ["industrial scrapyard", -1],  ["exclusion zone", -2] ];
 
-var what1 = [ ["quietly", 0],  ["loudly", 0],  ["quickly", 0],  ["carefully", 0],  ["flamboyantly", 0],  ["professionally", 0],  ["destructively", 0],  ["dismissively", 0],  ["seductively", 0] ];
+var what1 = [ ["quietly", 0],  ["loudly", 0],  ["quickly", 0],  ["carefully", 0],  ["flamboyantly", 0],  ["professionally", 0],  ["destructively", 0],  ["carelessly", 0],  ["seductively", 0] ];
 var what2 = [ ["assassinate", 0],  ["frame", 0],  ["destroy", 0],  ["steal", 0],  ["backup", 0],  ["prevent", 0],  ["retrieve", 0],  ["discredit", 0],  ["find", 0],  ["deceive", 0],  ["sabotage", 0],  ["transport", 0],  ["smuggle", 0],  ["investigate", 0],  ["join", 0],  ["resupply", 0],  ["survey", 0],  ["explore", 0],  ["salvage", 0],  ["capture", 0],  ["hijack", 0],  ["entertain", 0],  ["protect", 0],  ["save", 0],  ["aid", 0],  ["seduce", 0],  ["breed", 0],  ["rape", 0],  ["interrogate", 0],  ["smash", 0],  ["snatch", 0],  ["threaten", 0] ];
 var what3 = [ ["file", 0],  ["person", 0],  ["ship", 0],  ["shipment", 0],  ["creature", 0],  ["site", 0],  ["group", 0],  ["terminal", 0],  ["payout", 0],  ["device", 0],  ["decoder ring", 0] ];
 
@@ -53,10 +53,16 @@ function grau(thing) {
 function job(){
 
 	jobcr=0;
-	jobhelmet = "Corp job: "+gram(who1)+" "+grab(who2)+" meets you in "+gral(wherec)+".  The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in "+gral(wherec)+".  "+grau(whenc)+" is in progress at the site.  CR adj: "+jobcr+"<br>";
+	jobhelmet = "Corp job: "+gram(who1)+" "+grab(who2)+" meets you in "+gral(wherec)+".  The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in "+gral(wherec)+".  ";
+	if(jobcr>1){jobhelmet+=grau(whenx)+" is in progress at the site.  ";}
+	else if(jobcr>-1){jobhelmet+=grau(whenc)+" is in progress at the site.  ";}
+	jobhelmet+="CR adj: "+jobcr+"<br>";
 
 	jobcr=0;
-	jobhelmet += "Sprawl job: "+gram(who1)+" "+grab(who2)+" meets you in "+gral(wheres)+".  The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in "+gral(wheres)+".  "+grau(whens)+" is in progress at the site.  CR adj: "+jobcr;
+	jobhelmet += "Sprawl job: "+gram(who1)+" "+grab(who2)+" meets you in "+gral(wheres)+".  The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in "+gral(wheres)+".  "
+	if(jobcr>1){jobhelmet+=grau(whenx)+" is in progress at the site.  ";}
+	else if(jobcr>-1){jobhelmet+=grau(whens)+" is in progress at the site.  ";}
+	jobhelmet+="CR adj: "+jobcr+"<br>";
 
 	document.getElementById("jobcannon").innerHTML = jobhelmet;
 }
