@@ -1,0 +1,67 @@
+<html><body>
+
+<p id="jobcannon"></p>
+
+<script>
+
+var jobcr = 0;
+
+var who1 = [ ["celebrity", 0],  ["noble", 0],  ["artificial intelligence", -1],  ["political", 0],  ["corporate", -1],  ["church", 0],  ["government", 0],  ["starport", 0],  ["security", -1],  ["military", 1],  ["cult", 1],  ["gang", 1],  ["cartel", 1],  ["terrorist", 1],  ["faceless", 0],  ["merchant", -1] ];
+var who2 = [ ["agent", 0],  ["fixer", 0],  ["assistant", 1],  ["manager", 0],  ["marketer", 1],  ["leader", 1],  ["broker", 0],  ["courier", 0],  ["underling", 1],  ["henchman", 1],  ["body double", 0],  ["sympathizer", 1],  ["fanatic", 1],  ["spy", 1],  ["drone", 0],  ["datachip", 0],  ["pilot", 1] ];
+
+var wherec = [ ["corp tower", 2],  ["corp laboratory", 2],  ["military base", 1],  ["corp factory", 0],  ["residential arcology", 1],  ["gated community", 2],  ["nightlife scene", 0],  ["sleepy suburb", 1] ];
+var wheres = [ ["access hub", -1],  ["cartel zone", 1],  ["black market", -1],  ["gang turf", 2],  ["decrepit slum", 0],  ["combat zone", 2],  ["industrial scrapyard", -1],  ["exclusion zone", -2] ];
+
+var what1 = [ ["quietly", 0],  ["loudly", 0],  ["quickly", 0],  ["carefully", 0],  ["flamboyantly", 0],  ["professionally", 0],  ["destructively", 0],  ["dismissively", 0],  ["seductively", 0] ];
+var what2 = [ ["assassinate", 0],  ["frame", 0],  ["destroy", 0],  ["steal", 0],  ["backup", 0],  ["prevent", 0],  ["retrieve", 0],  ["discredit", 0],  ["find", 0],  ["deceive", 0],  ["sabotage", 0],  ["transport", 0],  ["smuggle", 0],  ["investigate", 0],  ["join", 0],  ["resupply", 0],  ["survey", 0],  ["explore", 0],  ["salvage", 0],  ["capture", 0],  ["hijack", 0],  ["entertain", 0],  ["protect", 0],  ["save", 0],  ["aid", 0],  ["seduce", 0],  ["breed", 0],  ["rape", 0],  ["interrogate", 0],  ["smash", 0],  ["snatch", 0],  ["threaten", 0] ];
+var what3 = [ ["file", 0],  ["person", 0],  ["ship", 0],  ["shipment", 0],  ["creature", 0],  ["site", 0],  ["group", 0],  ["terminal", 0],  ["payout", 0],  ["device", 0],  ["decoder ring", 0] ];
+
+var whenc = [ ["celebration", -1],  ["holospam", 1],  ["drone riot", 0],  ["malware", 0],  ["gridlock", -1],  ["hackwar", 1] ];
+var whens = [ ["protest", -1],  ["civil unrest", 0],  ["riot", 1],  ["crackdown", 2],  ["martial law", 1],  ["restriction", 2] ];
+var whenx = [ ["disaster", 1],  ["pollution", 1],  ["quarantine", 2],  ["famine", 0],  ["brownouts", 0],  ["blockaded", 2] ];
+
+function gram(thing) {
+	var num = thing.length;
+	var rng = Math.floor(Math.random() * num);
+	jobcr+=thing[rng][1];
+	if (['a', 'e', 'i', 'o', 'u', 'y'].indexOf(thing[rng][0].substring(0, 1)) != -1) {return "An "+thing[rng][0];}
+	else {return "A "+thing[rng][0];}
+}
+
+function gral(thing) {
+	var num = thing.length;
+	var rng = Math.floor(Math.random() * num);
+	jobcr+=thing[rng][1];
+	if (['a', 'e', 'i', 'o', 'u', 'y'].indexOf(thing[rng][0].substring(0, 1)) != -1) {return "an "+thing[rng][0];}
+	else {return "a "+thing[rng][0];}
+}
+
+function grab(thing) {
+	var num = thing.length;
+	var rng = Math.floor(Math.random() * num);
+	jobcr+=thing[rng][1];
+	return thing[rng][0];
+}
+
+function grau(thing) {
+	var num = thing.length;
+	var rng = Math.floor(Math.random() * num);
+	jobcr+=thing[rng][1];
+	return thing[rng][0].substring(0, 1).toUpperCase()+thing[rng][0].substring(1);
+}
+
+function job(){
+
+	jobcr=0;
+	jobhelmet = "Corp job: "+gram(who1)+" "+grab(who2)+" meets you in "+gral(wherec)+".  The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in "+gral(wherec)+".  "+grau(whenc)+" is in progress at the site.  CR adj: "+jobcr+"<br>";
+
+	jobcr=0;
+	jobhelmet += "Sprawl job: "+gram(who1)+" "+grab(who2)+" meets you in "+gral(wheres)+".  The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in "+gral(wheres)+".  "+grau(whens)+" is in progress at the site.  CR adj: "+jobcr;
+
+	document.getElementById("jobcannon").innerHTML = jobhelmet;
+}
+
+window.onload = job();
+
+</script>
+</html></body>
