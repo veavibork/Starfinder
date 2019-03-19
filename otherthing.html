@@ -1,18 +1,49 @@
 <html><body>
 
+Base CR: <input type="number" id="adcr" min="-1" max="20" value="4" onchange="newcr();">
 <p id="jobcannon"></p>
 <button onclick="job()">Another!</button>
 <button onclick="clr()">Reset</button>
 
 <script>
 
+var basecr = 0;
 var jobcr = 0;
 var jobct = 0;
 var jobhelmet= "";
 var jobbies="";
 
-var whoc = [ ["celebrity", 0],  ["noble", 0],  ["artificial intelligence", -1],  ["corporate", -1],  ["starport", 0],  ["security", -1],  ["military", 1],  ["faceless", 0],  ["merchant", -1], ["drone", 0] ];
-var whos = [ ["celebrity", 0],  ["church", 0],  ["political", 0],  ["government", 0],  ["police", -1],  ["cult", 1],  ["gang", 1],  ["cartel", 1],  ["terrorist", 1],  ["faceless", 0],  ["merchant", -1] ];
+
+var ranked = ["CR 1/3", "CR 1/2", "CR 1", "CR 2", "CR 3", "CR 4", "CR 5", "CR 6", "CR 7", "CR 8", "CR 9", "CR 10", "CR 11", "CR 12", "CR 13", "CR 14", "CR 15", "CR 16", "CR 17", "CR 18", "CR 19", "CR 20", "CR 21", "CR 22", "CR 23", "CR 24", "CR 25"];
+var gpget = [250, 500, 1000, 2000, 4000, 6000, 9000, 15000, 23000, 33000, 45000, 66000, 100000, 150000, 225000, 333000, 500000, 750000, 1125000, 1700000, 2500000, 3800000, 5700000, 8600000, 13000000, 20000000, 30000000, 45000000, 68000000, 100000000, 150000000, 230000000]; //1 = 1000
+
+var whoc = [
+["military", 1, "Military: humorless but competent employers.  No such thing as a free lunch, but will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
+["faceless", 1, "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
+["celebrity", 0, "Celebrity: offers a 10% discretion bonus if their identity remains a secret."],
+["noble", 0, "Noble: 10% payout bonus.  Why not?  They can afford it."],
+["drone", 0, "Drone: androids need things done too.  Will forfeit a share of the payout in return for a ridealong."],
+["security", 1, "Security: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."],
+["artificial intelligence", -1, "Artificial Intelligence: forfeits a share of the payout but is a virtual ridealong, offering decker services."],
+["starport", -1, "Starport: forfeits a share of the payout but expenses all travel and discretionary funds."],
+["corporate", -1, "Corporate: 10% payout bonus.  Will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
+["merchant", -1, "Merchant: 10% payout bonus.  Gotta spend money to make money."]
+];
+var whos = [
+["cult", 1, "Cult: 10% payout bonus, and the first hit is free.  Try it.  You might like it."],
+["cartel", 1, "Cartel: 10% payout bonus, but failure… oh, you don't want failure."],
+["terrorist", 1, "Terrorist: everyone's outsourcing these days.  Will forfeit a share of the payout in return for a ridealong."],
+["gang", 1, "Gang: forfeits a share of the payout but is generally a ridealong with thugs, gangbangers and roustabouts."],
+["faceless", 1, "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
+["celebrity", 0, "Celebrity: offers a 10% discretion bonus if their identity remains a secret."],
+["political", 0, "Political: humorless but competent employers.  No benefits.  No free lunch.  This is your job."],
+["government", 0, "Government: forfeits a share of the payout but expenses all travel and discretionary funds."],
+["church", -1, "Church: no benefits, but is better at keeping a secret than nearly anyone else."],
+["police", 1, "Police: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."],
+["merchant", -1, "Merchant: 10% payout bonus.  Gotta spend money to make money."],
+["family/friend", -1, "Family/Friend: forfeits the payout (all of it!) but expenses all travel and discretionary funds."]
+];
+
 var who1 = [ ["agent", 0],  ["fixer", 0],  ["assistant", 1],  ["manager", 0],  ["marketer", 1],  ["leader", 1],  ["broker", 0],  ["courier", 0],  ["underling", 1],  ["henchman", 1],  ["body double", 0],  ["sympathizer", 1],  ["fanatic", 1],  ["spy", 1],  ["hologram", 0],  ["pilot", 1], ["enemy", 1] ];
 
 var wherec = [ 
@@ -83,38 +114,43 @@ function grau(thing) {
 function job(){
 
 	jobbies="";
+	var rng = Math.floor(Math.random() * 5);
 
 	if(jobct==0) {
 	jobcr=0;
-	jobhelmet+= "<p>"+gram(whoc)+" "+grab(who1)+" wants to meet at ";
+	jobbies+="<li><b>Offered</b> by a ";
+	jobhelmet+= "<p>"+gram(whoc)+" "+grab(who1)+" wants to meet in ";
 	jobbies+="<li><b>Meeting</b> at a ";
 	jobhelmet+=gral(wherec)+".<br>The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in ";
 	jobbies+="<li><b>Op site</b> at a ";
 	jobhelmet+=gral(wherec)+".<br>";
-	if(jobcr>1){
+	if(rng==0){
 	jobbies+="<li><b>Complication</b> ";
 	jobhelmet+=grau(whenx)+" are in progress at the site.  ";}
-	else if(jobcr>-1){
+	else if(rng>2){
 	jobbies+="<li><b>Complication</b> ";
 	jobhelmet+=grau(whenc)+" are in progress at the site.  ";}
-	jobhelmet+="<b>CR adj: "+jobcr+"</b></p>";
+	var finalcr = basecr+jobcr; if(finalcr<0){finalcr=0;}
+	jobhelmet+="<b>"+ranked[finalcr]+", payout: "+gpget[finalcr]+"</b></p>";
 	jobct=1;}
 
 	else {
 	jobcr=0;
-	jobhelmet+= "<p>"+gram(whos)+" "+grab(who1)+" wants to meet at ";
+	jobbies+="<li><b>Offered</b> by a ";
+	jobhelmet+= "<p>"+gram(whos)+" "+grab(who1)+" wants to meet in ";
 	jobbies+="<li><b>Meeting</b> at a ";
 	jobhelmet+=gral(wheres)+".<br>The job: "+grab(what1)+" "+grab(what2)+" "+gral(what3)+" in ";
 	jobbies+="<li><b>Op site</b> at a ";
 	jobhelmet+=gral(wheres)+".<br>"
-	if(jobcr>1){
+	if(rng==0){
 	jobbies+="<li><b>Complication</b> ";
 
 	jobhelmet+=grau(whenx)+" are in progress at the site.  ";}
-	else if(jobcr>-1){
+	else if(rng>2){
 	jobbies+="<li><b>Complication</b> ";
 	jobhelmet+=grau(whens)+" are in progress at the site.  ";}
-	jobhelmet+="<b>CR adj: "+jobcr+"</b></p>";
+	var finalcr = basecr+jobcr; if(finalcr<0){finalcr=0;}
+	jobhelmet+="<b>"+ranked[finalcr]+", payout: "+gpget[finalcr]+"</b></p>";
 	jobct=0;}
 
 	jobhelmet+="<font size=2>"+jobbies+"</font>";
@@ -126,7 +162,12 @@ function clr(){
 	job();
 }
 
+function newcr(){
+	basecr = parseInt(document.getElementById("adcr").value);
+}
+
 window.onload = job();
+window.onload = newcr();
 
 </script>
 </html></body>
