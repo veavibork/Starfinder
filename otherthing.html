@@ -1,15 +1,12 @@
 <html><body>
 
-Base CR: <input type="number" id="adcr" min="-1" max="20" value="4" onchange="newcr();">
+Target CR: <input type="number" id="adcr" min="-1" max="20" value="4">
 <p id="jobcannon"></p>
-<button onclick="job()">Another!</button>
-<button onclick="clr()">Reset</button>
+<button onclick="clr()">Again!</button>
 
 <script>
 
-var basecr = 0;
-var jobcr = 0;
-var jobct = 0;
+var basecr=0;
 var jobhelmet= "";
 var jobbies="";
 
@@ -80,7 +77,6 @@ var whenx = [ ["disasters", 1, "Disaster: Something bad is happening here. It mi
 function gram(thing) {
 	var num = thing.length;
 	var rng = Math.floor(Math.random() * num);
-	jobcr+=thing[rng][1];
 	if(thing[rng][2]!=undefined) {jobbies+=thing[rng][2];}
 	if (['a', 'e', 'i', 'o', 'u', 'y'].indexOf(thing[rng][0].substring(0, 1)) != -1) {return "An "+thing[rng][0];}
 	else {return "A "+thing[rng][0];}
@@ -89,7 +85,6 @@ function gram(thing) {
 function gral(thing) {
 	var num = thing.length;
 	var rng = Math.floor(Math.random() * num);
-	jobcr+=thing[rng][1];
 	if(thing[rng][2]!=undefined) {jobbies+=thing[rng][2];}
 	if (['a', 'e', 'i', 'o', 'u', 'y'].indexOf(thing[rng][0].substring(0, 1)) != -1) {return "an "+thing[rng][0];}
 	else {return "a "+thing[rng][0];}
@@ -98,7 +93,6 @@ function gral(thing) {
 function grab(thing) {
 	var num = thing.length;
 	var rng = Math.floor(Math.random() * num);
-	jobcr+=thing[rng][1];
 	if(thing[rng][2]!=undefined) {jobbies+=thing[rng][2];}
 	return thing[rng][0];
 }
@@ -106,18 +100,15 @@ function grab(thing) {
 function grau(thing) {
 	var num = thing.length;
 	var rng = Math.floor(Math.random() * num);
-	jobcr+=thing[rng][1];
 	if(thing[rng][2]!=undefined) {jobbies+=thing[rng][2];}
 	return thing[rng][0].substring(0, 1).toUpperCase()+thing[rng][0].substring(1);
 }
 
-function job(){
+function jobc(cr){
 
 	jobbies="";
 	var rng = Math.floor(Math.random() * 5);
 
-	if(jobct==0) {
-	jobcr=0;
 	jobbies+="<li><b>Offered</b> by a ";
 	jobhelmet+= "<p>"+gram(whoc)+" "+grab(who1)+" wants to meet in ";
 	jobbies+="<li><b>Meeting</b> at a ";
@@ -130,12 +121,17 @@ function job(){
 	else if(rng>2){
 	jobbies+="<li><b>Complication</b> ";
 	jobhelmet+=grau(whenc)+" are in progress at the site.  ";}
-	var finalcr = basecr+jobcr; if(finalcr<0){finalcr=0;}
-	jobhelmet+="<b>"+ranked[finalcr]+", payout: "+gpget[finalcr]+"</b></p>";
-	jobct=1;}
+	jobhelmet+="<b>"+ranked[cr]+", payout: "+gpget[cr]+"</b></p>";
 
-	else {
-	jobcr=0;
+	jobhelmet+="<font size=2>"+jobbies+"</font>";
+	document.getElementById("jobcannon").innerHTML = jobhelmet;
+}
+
+function jobs(cr){
+
+	jobbies="";
+	var rng = Math.floor(Math.random() * 5);
+
 	jobbies+="<li><b>Offered</b> by a ";
 	jobhelmet+= "<p>"+gram(whos)+" "+grab(who1)+" wants to meet in ";
 	jobbies+="<li><b>Meeting</b> at a ";
@@ -144,30 +140,29 @@ function job(){
 	jobhelmet+=gral(wheres)+".<br>"
 	if(rng==0){
 	jobbies+="<li><b>Complication</b> ";
-
 	jobhelmet+=grau(whenx)+" are in progress at the site.  ";}
 	else if(rng>2){
 	jobbies+="<li><b>Complication</b> ";
 	jobhelmet+=grau(whens)+" are in progress at the site.  ";}
-	var finalcr = basecr+jobcr; if(finalcr<0){finalcr=0;}
-	jobhelmet+="<b>"+ranked[finalcr]+", payout: "+gpget[finalcr]+"</b></p>";
-	jobct=0;}
+	jobhelmet+="<b>"+ranked[cr]+", payout: "+gpget[cr]+"</b></p>";
 
 	jobhelmet+="<font size=2>"+jobbies+"</font>";
 	document.getElementById("jobcannon").innerHTML = jobhelmet;
 }
 
+
 function clr(){
 	jobhelmet="";
-	job();
-}
-
-function newcr(){
 	basecr = parseInt(document.getElementById("adcr").value);
+	jobs(basecr);
+	jobs(basecr+1);
+	jobs(basecr+2);
+	jobc(basecr);
+	jobc(basecr+1);
+	jobc(basecr+2);
 }
 
-window.onload = job();
-window.onload = newcr();
+window.onload = clr();
 
 </script>
 </html></body>
