@@ -316,6 +316,27 @@ function job(foo, bar, xyz){
 	if(foo==1 && bar==1){jtop+=wheres1[1][0];jdata+="<li>"+wheres1[1][2];}
 	if(foo==1 && bar==2){jtop+=wheres2[1][0];jdata+="<li>"+wheres2[1][2];}
 
+	if(Math.floor(Math.random() * 10)<basecr){
+
+	jtop+="<br>Local conditions: ";
+
+	if(foo==0 && bar==0){jtop+=whenc0[1][0];jdata+="<li>"+whenc0[1][2];}
+	if(foo==0 && bar==1){jtop+=whenc1[1][0];jdata+="<li>"+whenc1[1][2];}
+	if(foo==0 && bar==2){jtop+=whenc2[1][0];jdata+="<li>"+whenc2[1][2];}
+	if(foo==1 && bar==0){jtop+=whens0[1][0];jdata+="<li>"+whens0[1][2];}
+	if(foo==1 && bar==1){jtop+=whens1[1][0];jdata+="<li>"+whens1[1][2];}
+	if(foo==1 && bar==2){jtop+=whens2[1][0];jdata+="<li>"+whens2[1][2];}
+	}
+
+	if(Math.floor(Math.random() * 20)<basecr){
+
+	jtop+="<br>General conditions: ";
+
+	if(foo==0){jtop+=whenx0[1][0];jdata+="<li>"+whenx0[1][2];}
+	if(foo==1){jtop+=whenx1[1][0];jdata+="<li>"+whenx1[1][2];}
+	if(foo==2){jtop+=whenx2[1][0];jdata+="<li>"+whenx2[1][2];}
+	}
+
 	jtop+="<br>Mission: ";
 
 	if(bar==0){jtop+=adj0[xyz]+" "+verb0[xyz]+" the "+noun0[xyz];}
