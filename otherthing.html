@@ -30,6 +30,7 @@ var gpget = [250, 500, 1000, 2000, 4000, 6000, 9000, 15000, 23000, 33000, 45000,
 var whoc0 = [
 ["starport", -1, "Starport: forfeits a share of the payout but expenses all travel and discretionary funds."],
 ["corporate", -1, "Corporate: 10% payout bonus.  Will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
+["religious", -1, "Religious: forfeits a share of the payout but you are untouchable."],
 ["merchant", -1, "Merchant: 10% payout bonus.  Gotta spend money to make money."]
 ];
 
@@ -37,6 +38,7 @@ var whoc0 = [
 var whoc1 = [
 ["celebrity", 0, "Celebrity: offers a 10% discretion bonus if their identity remains a secret."],
 ["noble", 0, "Noble: 10% payout bonus.  Why not?  They can afford it."],
+["heir", 0, "Heir: offers a 10% style bonus if you do a backflip (or otherwise pull it off with flair)."],
 ["artificial intelligence", 0, "Artificial Intelligence: forfeits a share of the payout but is a virtual ridealong, offering decker services."],
 ];
 
@@ -44,12 +46,14 @@ var whoc1 = [
 var whoc2 = [
 ["military", 1, "Military: humorless but competent employers.  No such thing as a free lunch, but will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
 ["faceless", 1, "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
+["secret society", 1, "Secret Society: the shadow government.  Never tells you everything."],
 ["security", 1, "Security: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."]
 ];
 
 //safe (sprawl)
 var whos0 = [
 ["church", -1, "Church: no benefits, but is better at keeping a secret than nearly anyone else."],
+["clinic", -1, "Clinic: forfeits a share of the payout but expenses all medical bills."],
 ["merchant", -1, "Merchant: 10% payout bonus.  Gotta spend money to make money."],
 ["family/friend", -1, "Family/Friend: forfeits the payout (all of it!) but expenses all travel and discretionary funds."]
 ];
@@ -58,6 +62,7 @@ var whos0 = [
 var whos1 = [
 ["political", 0, "Political: humorless but competent employers.  No benefits.  No free lunch.  This is your job."],
 ["government", 0, "Government: forfeits a share of the payout but expenses all travel and discretionary funds."],
+["police", 1, "Police: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."],
 ["gang", 1, "Gang: forfeits a share of the payout but is generally a ridealong with thugs, gangbangers and roustabouts."]
 ];
 
@@ -65,9 +70,9 @@ var whos1 = [
 var whos2 = [
 ["cult", 1, "Cult: 10% payout bonus, and the first hit is free.  Try it.  You might like it."],
 ["cartel", 1, "Cartel: 10% payout bonus, but failure… oh, you don't want failure."],
+["pirate", 1, "Pirate: no benefits, no pressure, just fuck shit up."],
 ["terrorist", 1, "Terrorist: everyone's outsourcing these days.  Will forfeit a share of the payout in return for a ridealong."],
 ["faceless", 1, "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
-["police", 1, "Police: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."]
 ];
 
 //safe (know what they're doing)
@@ -75,6 +80,8 @@ var whox0 = [
 ["fixer"],
 ["broker"],
 ["manager"],
+["program"],
+["contractor"],
 ["leader"]
 ];
 
@@ -336,6 +343,33 @@ function job(foo, bar, xyz){
 	if(foo==1){jtop+=whenx1[1][0];jdata+="<li>"+whenx1[1][2];}
 	if(foo==2){jtop+=whenx2[1][0];jdata+="<li>"+whenx2[1][2];}
 	}
+
+	jtop+="<br>POI: ";
+
+	if(foo==0 && bar==0){jtop+=whoc0[1][0];}
+	if(foo==0 && bar==1){jtop+=whoc1[1][0];}
+	if(foo==0 && bar==2){jtop+=whoc2[1][0];}
+	if(foo==1 && bar==0){jtop+=whos0[1][0];}
+	if(foo==1 && bar==1){jtop+=whos1[1][0];}
+	if(foo==1 && bar==2){jtop+=whos2[1][0];}
+
+	if(bar==0){jtop+=" "+whox0[xyz+2];}
+	if(bar==1){jtop+=" "+whox1[xyz+2];}
+	if(bar==2){jtop+=" "+whox2[xyz+2];}
+
+	jtop+=", ";
+
+	if(foo==0 && bar==0){jtop+=whoc0[2][0];}
+	if(foo==0 && bar==1){jtop+=whoc1[2][0];}
+	if(foo==0 && bar==2){jtop+=whoc2[2][0];}
+	if(foo==1 && bar==0){jtop+=whos0[2][0];}
+	if(foo==1 && bar==1){jtop+=whos1[2][0];}
+	if(foo==1 && bar==2){jtop+=whos2[2][0];}
+
+	if(bar==0){jtop+=" "+whox0[xyz+4];}
+	if(bar==1){jtop+=" "+whox1[xyz+4];}
+	if(bar==2){jtop+=" "+whox2[xyz+4];}
+
 
 	jtop+="<br>Mission: ";
 
