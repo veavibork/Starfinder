@@ -346,29 +346,29 @@ function job(foo, bar, xyz){
 
 	jtop+="<br>POI: ";
 
-	if(foo==0 && bar==0){jtop+=whoc0[1][0];}
-	if(foo==0 && bar==1){jtop+=whoc1[1][0];}
-	if(foo==0 && bar==2){jtop+=whoc2[1][0];}
-	if(foo==1 && bar==0){jtop+=whos0[1][0];}
-	if(foo==1 && bar==1){jtop+=whos1[1][0];}
-	if(foo==1 && bar==2){jtop+=whos2[1][0];}
+	if(foo==0 && bar==0){jtop+=whoc1[1][0];}
+	if(foo==0 && bar==1){jtop+=whoc2[1][0];}
+	if(foo==0 && bar==2){jtop+=whoc0[1][0];}
+	if(foo==1 && bar==0){jtop+=whos1[1][0];}
+	if(foo==1 && bar==1){jtop+=whos2[1][0];}
+	if(foo==1 && bar==2){jtop+=whos0[1][0];}
 
-	if(bar==0){jtop+=" "+whox0[xyz+2];}
-	if(bar==1){jtop+=" "+whox1[xyz+2];}
-	if(bar==2){jtop+=" "+whox2[xyz+2];}
+	if(bar==0){jtop+=" "+whox1[xyz+2];}
+	if(bar==1){jtop+=" "+whox2[xyz+2];}
+	if(bar==2){jtop+=" "+whox0[xyz+2];}
 
 	jtop+=", ";
 
-	if(foo==0 && bar==0){jtop+=whoc0[2][0];}
-	if(foo==0 && bar==1){jtop+=whoc1[2][0];}
-	if(foo==0 && bar==2){jtop+=whoc2[2][0];}
-	if(foo==1 && bar==0){jtop+=whos0[2][0];}
-	if(foo==1 && bar==1){jtop+=whos1[2][0];}
-	if(foo==1 && bar==2){jtop+=whos2[2][0];}
+	if(foo==0 && bar==0){jtop+=whoc2[2][0];}
+	if(foo==0 && bar==1){jtop+=whoc0[2][0];}
+	if(foo==0 && bar==2){jtop+=whoc1[2][0];}
+	if(foo==1 && bar==0){jtop+=whos2[2][0];}
+	if(foo==1 && bar==1){jtop+=whos0[2][0];}
+	if(foo==1 && bar==2){jtop+=whos1[2][0];}
 
-	if(bar==0){jtop+=" "+whox0[xyz+4];}
-	if(bar==1){jtop+=" "+whox1[xyz+4];}
-	if(bar==2){jtop+=" "+whox2[xyz+4];}
+	if(bar==0){jtop+=" "+whox2[xyz+4];}
+	if(bar==1){jtop+=" "+whox0[xyz+4];}
+	if(bar==2){jtop+=" "+whox1[xyz+4];}
 
 
 	jtop+="<br>Mission: ";
