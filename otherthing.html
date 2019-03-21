@@ -28,51 +28,51 @@ var gpget = [250, 500, 1000, 2000, 4000, 6000, 9000, 15000, 23000, 33000, 45000,
 
 //safe (corp)
 var whoc0 = [
-["starport", -1, "Starport: forfeits a share of the payout but expenses all travel and discretionary funds."],
-["corporate", -1, "Corporate: 10% payout bonus.  Will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
-["religious", -1, "Religious: forfeits a share of the payout but you are untouchable."],
-["merchant", -1, "Merchant: 10% payout bonus.  Gotta spend money to make money."]
+["starport", "Starport: forfeits a share of the payout but expenses all travel and discretionary funds."],
+["corporate", "Corporate: 10% payout bonus.  Will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
+["religious", "Religious: forfeits a share of the payout but you are untouchable."],
+["merchant", "Merchant: 10% payout bonus.  Gotta spend money to make money."]
 ];
 
 //questionable
 var whoc1 = [
-["celebrity", 0, "Celebrity: offers a 10% discretion bonus if their identity remains a secret."],
-["noble", 0, "Noble: 10% payout bonus.  Why not?  They can afford it."],
-["heir", 0, "Heir: offers a 10% style bonus if you do a backflip (or otherwise pull it off with flair)."],
-["artificial intelligence", 0, "Artificial Intelligence: forfeits a share of the payout but is a virtual ridealong, offering decker services."],
+["celebrity", "Celebrity: offers a 10% discretion bonus if their identity remains a secret."],
+["noble", "Noble: 10% payout bonus.  Why not?  They can afford it."],
+["heir", "Heir: offers a 10% style bonus if you do a backflip (or otherwise pull it off with flair)."],
+["artificial intelligence", "Artificial Intelligence: forfeits a share of the payout but is a virtual ridealong, offering decker services."],
 ];
 
 //dangerous
 var whoc2 = [
-["military", 1, "Military: humorless but competent employers.  No such thing as a free lunch, but will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
-["faceless", 1, "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
-["secret society", 1, "Secret Society: the shadow government.  Never tells you everything."],
-["security", 1, "Security: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."]
+["military", "Military: humorless but competent employers.  No such thing as a free lunch, but will provide gear (to be returned) or allow buying gear up front (out of the payout)."],
+["faceless", "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
+["secret society", "Secret Society: the shadow government.  Never tells you everything."],
+["security", "Security: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."]
 ];
 
 //safe (sprawl)
 var whos0 = [
-["church", -1, "Church: no benefits, but is better at keeping a secret than nearly anyone else."],
-["clinic", -1, "Clinic: forfeits a share of the payout but expenses all medical bills."],
-["merchant", -1, "Merchant: 10% payout bonus.  Gotta spend money to make money."],
-["family/friend", -1, "Family/Friend: forfeits the payout (all of it!) but expenses all travel and discretionary funds."]
+["church", "Church: no benefits, but is better at keeping a secret than nearly anyone else."],
+["clinic", "Clinic: forfeits a share of the payout but expenses all medical bills."],
+["merchant", "Merchant: 10% payout bonus.  Gotta spend money to make money."],
+["family/friend", "Family/Friend: forfeits the payout (all of it!) but expenses all travel and discretionary funds."]
 ];
 
 //questionable
 var whos1 = [
-["political", 0, "Political: humorless but competent employers.  No benefits.  No free lunch.  This is your job."],
-["government", 0, "Government: forfeits a share of the payout but expenses all travel and discretionary funds."],
-["police", 1, "Police: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."],
-["gang", 1, "Gang: forfeits a share of the payout but is generally a ridealong with thugs, gangbangers and roustabouts."]
+["political", "Political: humorless but competent employers.  No benefits.  No free lunch.  This is your job."],
+["government", "Government: forfeits a share of the payout but expenses all travel and discretionary funds."],
+["police", "Police: forfeits a share of the payout but is generally a ridealong with authorized law enforcement officers."],
+["gang", "Gang: forfeits a share of the payout but is generally a ridealong with thugs, gangbangers and roustabouts."]
 ];
 
 //dangerous
 var whos2 = [
-["cult", 1, "Cult: 10% payout bonus, and the first hit is free.  Try it.  You might like it."],
-["cartel", 1, "Cartel: 10% payout bonus, but failure… oh, you don't want failure."],
-["pirate", 1, "Pirate: no benefits, no pressure, just fuck shit up."],
-["terrorist", 1, "Terrorist: everyone's outsourcing these days.  Will forfeit a share of the payout in return for a ridealong."],
-["faceless", 1, "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
+["cult", "Cult: 10% payout bonus, and the first hit is free.  Try it.  You might like it."],
+["cartel", "Cartel: 10% payout bonus, but failure… oh, you don't want failure."],
+["pirate", "Pirate: no benefits, no pressure, just fuck shit up."],
+["terrorist", "Terrorist: everyone's outsourcing these days.  Will forfeit a share of the payout in return for a ridealong."],
+["faceless", "Faceless: refuses to meet directly, but offers a 10% trust bonus.  Likely to lead to unexpected complications."],
 ];
 
 //safe (know what they're doing)
@@ -107,39 +107,39 @@ var whox2 = [
 ];
 
 var wherec0 = [ 
-["sleepy suburb", 1, "Sleepy Suburb: Inhabited by people who like things to remain quiet, unchanging and uncomplicated — ordinary suburbanite consumers, who don’t want their lives interrupted by thugs and ruffians and people who are probably much like the characters."],
-["nightlife scene", 0, "Nightlife Scene: Well stocked with bars, nightclubs, and other entertainment venues. During the day the area is quiet, especially in the morning. After dark is a different matter and people flock to the party zone to blow off steam and remove the worries of their lives through excess and intoxicants."],
-["transportation hub", 0, "Transportation Hub: An airport, mass transit station, or even a parking garage. The whole point of the place is getting people to move from point A to point B, which provides plenty of cover for meets and drops. Security is dense but lax."]
+["sleepy suburb", "Sleepy Suburb: Inhabited by people who like things to remain quiet, unchanging and uncomplicated — ordinary suburbanite consumers, who don’t want their lives interrupted by thugs and ruffians and people who are probably much like the characters."],
+["nightlife scene", "Nightlife Scene: Well stocked with bars, nightclubs, and other entertainment venues. During the day the area is quiet, especially in the morning. After dark is a different matter and people flock to the party zone to blow off steam and remove the worries of their lives through excess and intoxicants."],
+["transportation hub", "Transportation Hub: An airport, mass transit station, or even a parking garage. The whole point of the place is getting people to move from point A to point B, which provides plenty of cover for meets and drops. Security is dense but lax."]
 ];
 
 var wherec1 = [ 
-["corp factory", 0, "Corp Factory: One or more automated or manned manufacturing units with heavy equipment engaged in construction and production. The risks of travel through this zone are mostly environmental."],
-["corp arcology", 1, "Corp Arcology: Corporate drones and ambitious social climbers frequent this area.  This can run from decrepit LIVEFAC blocks to posh quarters for valued employees and executives."],
-["gated community", 2, "Gated Community: Inhabited largely by the wealthy and the people who cater to them, which often leads to a certain elitist attitude."]
+["corp factory", "Corp Factory: One or more automated or manned manufacturing units with heavy equipment engaged in construction and production. The risks of travel through this zone are mostly environmental."],
+["corp arcology", "Corp Arcology: Corporate drones and ambitious social climbers frequent this area.  This can run from decrepit LIVEFAC blocks to posh quarters for valued employees and executives."],
+["gated community", "Gated Community: Inhabited largely by the wealthy and the people who cater to them, which often leads to a certain elitist attitude."]
 ];
 
 var wherec2 = [ 
-["corp tower", 2, "Corp Tower: A corporate center, usually filled with the offices and outbuildings of various corporate interests, making this a great place for commercial endeavors.  Security is high but the suits can often turn off or manipulate the monitoring."],
-["military base", 1, "Military Base: A military headquarters, which can complicate things for characters trying to get into various types of trouble, as it tends to be tightly secured and full of armed soldiers."],
-["corp laboratory", 2, "Corp Laboratory: A center for some sort of research and development, with technology very prevalent and readily available.  It has lab workers, tanks of chemicals, mechanical and electronic apparatus, and all manner of things that can get accidentally shot."],
-["black site", 2, "Black Site: This place should not be. Whatever else is going on, the location of the mission is an off the books and off the grid locale, or might be hidden behind a mundane facade.  Security responses are immediate and lethal."]
+["corp tower", "Corp Tower: A corporate center, usually filled with the offices and outbuildings of various corporate interests, making this a great place for commercial endeavors.  Security is high but the suits can often turn off or manipulate the monitoring."],
+["military base", "Military Base: A military headquarters, which can complicate things for characters trying to get into various types of trouble, as it tends to be tightly secured and full of armed soldiers."],
+["corp laboratory", "Corp Laboratory: A center for some sort of research and development, with technology very prevalent and readily available.  It has lab workers, tanks of chemicals, mechanical and electronic apparatus, and all manner of things that can get accidentally shot."],
+["black site", "Black Site: This place should not be. Whatever else is going on, the location of the mission is an off the books and off the grid locale, or might be hidden behind a mundane facade.  Security responses are immediate and lethal."]
 ];
 
 var wheres0 = [
-["access hub", -1, "Access Hub: Zones do not always connect right up to each other, nor do regions of a city. An interzone is the area between two others. This lightly populated area tends to be filled with limited access streets, few residences or businesses, and is dedicated to traveling through, not too. Even so, in crowded cities you might find a few people living her under overpasses, in culverts, or even in abandoned vehicles."],
-["exclusion zone", -2, "Exclusion Zone: Population losses, lack of infrastructure, or urban planning have left some areas of once prosperous cities as empty urban wastelands. Many of these have suffered from some environmental calamity that makes even the homeless and dispossessed stay away. Those who live here, if it can be called living, eke out a bare existence far from the mainstream society. There are no services here, not even water or electricity. Garbage collection stopped long ago. What few wild animals remain in the world tend to congregate here, and the residents are nearly, if not more, feral."],
-["industrial scrapyard", -1, "Industrial Scrapyard: The factories and warehouses in this zone used to hum with activity, but today they are the crumbing remains of better times. Often the machinery remains behind long after the people have left. These rusted hulks provide a source of scrap metal for slummers, as well as the occasionally useful bit. Rarely boxes or even shipping containers of valuable and not yet fully decayed goods can be found. The greatest threat here is the environment, these factories were never cleanly operating at the best of times. Industrial waste can remain decades after the factory went quiet."]
+["access hub", "Access Hub: Zones do not always connect right up to each other, nor do regions of a city. An interzone is the area between two others. This lightly populated area tends to be filled with limited access streets, few residences or businesses, and is dedicated to traveling through, not too. Even so, in crowded cities you might find a few people living her under overpasses, in culverts, or even in abandoned vehicles."],
+["exclusion zone", "Exclusion Zone: Population losses, lack of infrastructure, or urban planning have left some areas of once prosperous cities as empty urban wastelands. Many of these have suffered from some environmental calamity that makes even the homeless and dispossessed stay away. Those who live here, if it can be called living, eke out a bare existence far from the mainstream society. There are no services here, not even water or electricity. Garbage collection stopped long ago. What few wild animals remain in the world tend to congregate here, and the residents are nearly, if not more, feral."],
+["industrial scrapyard", "Industrial Scrapyard: The factories and warehouses in this zone used to hum with activity, but today they are the crumbing remains of better times. Often the machinery remains behind long after the people have left. These rusted hulks provide a source of scrap metal for slummers, as well as the occasionally useful bit. Rarely boxes or even shipping containers of valuable and not yet fully decayed goods can be found. The greatest threat here is the environment, these factories were never cleanly operating at the best of times. Industrial waste can remain decades after the factory went quiet."]
 ];
 
 var wheres1 = [
-["decrepit slum", 0, "Decrepit Slum: Inhabited by the poor and other dregs of society, which often leads to a certain insular mentality.  Bribery is common and any wealthy character must pay 1d20*10cr to get any answers when asking questions."],
-["black market", -1, "Black Market: Thriving with commerce dealing in illegal and illicit goods and services, which means it’s a lot easier to find these things — or get into trouble."]
+["decrepit slum", "Decrepit Slum: Inhabited by the poor and other dregs of society, which often leads to a certain insular mentality.  Bribery is common and any wealthy character must pay 1d20*10cr to get any answers when asking questions."],
+["black market", "Black Market: Thriving with commerce dealing in illegal and illicit goods and services, which means it’s a lot easier to find these things — or get into trouble."]
 ];
 
 var wheres2 = [
-["cartel zone", 1, "Cartel Zone: Under the control of a major underworld figure. Occasionally, this can also be the local leader or head of state; in any case, very little goes on in the area which this figure doesn’t know about. This can work for or against the characters, depending on circumstances."],
-["gang turf", 2, "Gang Turf: Belongs to a gang of some kind. They might be one of those youth gangs the news talks about, a themed gang that goes in for outrageous dress and body mods, or a gang based on a religious, species, or ethnic minority. They control the streets here and make sure everyone knows it. If you miss the graffiti on the walls you will certainly see the gang's lookouts hanging around near doorways or on street corners."],
-["combat zone", 2, "Combat Zone: Torn up by numerous conflicts, run-down, and only loosely patrolled by any kind of law enforcement.  Dangerous but fairly easy to move around unnoticed.  Shoot first, shoot often, ask questions never."]
+["cartel zone", "Cartel Zone: Under the control of a major underworld figure. Occasionally, this can also be the local leader or head of state; in any case, very little goes on in the area which this figure doesn’t know about. This can work for or against the characters, depending on circumstances."],
+["gang turf", "Gang Turf: Belongs to a gang of some kind. They might be one of those youth gangs the news talks about, a themed gang that goes in for outrageous dress and body mods, or a gang based on a religious, species, or ethnic minority. They control the streets here and make sure everyone knows it. If you miss the graffiti on the walls you will certainly see the gang's lookouts hanging around near doorways or on street corners."],
+["combat zone", "Combat Zone: Torn up by numerous conflicts, run-down, and only loosely patrolled by any kind of law enforcement.  Dangerous but fairly easy to move around unnoticed.  Shoot first, shoot often, ask questions never."]
 ];
 
 var adj0 = [
@@ -234,48 +234,48 @@ var noun2 = [
 ];
 
 var whenc0 = [
-["celebrations", -1, "Celebration: A parade is occurring, likely either a dying holdover from happier times that carries on by tradition or a government sponsored rally to promote patriotism, obedience, or remind the people of who is in charge. In either case the streets have people and vehicles moving down them at a stately pace, the sidewalks are lined with bystanders, and the air is filled with sound. Everybody loves a parade, especially when you are ordered to. Now cheer the glorious leader, cheer you peons, cheer!"],
-["holospams", 1, "Holospam: This area is rife with holographic interference; cartoon rodents ask people if they have tried Crunchy Chicken Pops, cows branded with synthetic beef manufacturer's logos wander the streets.  Everything is on sale 50% off! This one easy trick will clear your Tap of viruses! Have you tried Doctor Bonlo's cybercream? This game is so addictive corporations are banning it! This Saturday Only Civic Auditorium Cyber Mixed Martial Arts Face Off! Enhance your action with Hyper-Squaddie nanite treatments! Only 199 credits! Hurry Supplies won't last long!"]
+["celebrations", "Celebration: A parade is occurring, likely either a dying holdover from happier times that carries on by tradition or a government sponsored rally to promote patriotism, obedience, or remind the people of who is in charge. In either case the streets have people and vehicles moving down them at a stately pace, the sidewalks are lined with bystanders, and the air is filled with sound. Everybody loves a parade, especially when you are ordered to. Now cheer the glorious leader, cheer you peons, cheer!"],
+["holospams", "Holospam: This area is rife with holographic interference; cartoon rodents ask people if they have tried Crunchy Chicken Pops, cows branded with synthetic beef manufacturer's logos wander the streets.  Everything is on sale 50% off! This one easy trick will clear your Tap of viruses! Have you tried Doctor Bonlo's cybercream? This game is so addictive corporations are banning it! This Saturday Only Civic Auditorium Cyber Mixed Martial Arts Face Off! Enhance your action with Hyper-Squaddie nanite treatments! Only 199 credits! Hurry Supplies won't last long!"]
 ];
 
 var whenc1 = [
-["gridlocks", -1, "Gridlock: Hackers have broken into the traffic control network as well as the municipal signage in this area. Vehicular and pedestrians traffic is being directed into random and at times dangerous routes, intersections are a maze of screaming drivers and honking horns. The automated vehicle control system is entirely broken down and cars are being routed into circles or onto to collision courses. Adding to the mayhem, the municipal signage display false messages, wrong directions, or just laughing emojis."],
-["malwares", 0, "Malware: This area is infested with malware, causing all technology to become buggy, unreliable, and potential infection vectors.  Navigation is unreliable due to hacked signage.  All connections are targets for Computer Imps."]
+["gridlocks", "Gridlock: Hackers have broken into the traffic control network as well as the municipal signage in this area. Vehicular and pedestrians traffic is being directed into random and at times dangerous routes, intersections are a maze of screaming drivers and honking horns. The automated vehicle control system is entirely broken down and cars are being routed into circles or onto to collision courses. Adding to the mayhem, the municipal signage display false messages, wrong directions, or just laughing emojis."],
+["malwares", "Malware: This area is infested with malware, causing all technology to become buggy, unreliable, and potential infection vectors.  Navigation is unreliable due to hacked signage.  All connections are targets for Computer Imps."]
 ];
 
 var whenc2 = [
-["drone riots", 0, "Drone Riot: Something has caused synthetics, androids and robots to go haywire.  They may have been hacked; it could be a coding bug, or possibly some sort of AI event.  Whatever the cause, automatons are running riot in the streets. This creates all manner of distractions."],
-["hackwars", 1, "Hackwar: The network in this area is currently under attack. This is not the malware that infests corrupted zones; this is a dedicated and strategic assault with a clear goal. Often this takes the form of attempts to hack into servers and other data caches and scoop out the juicy data inside. While the attack has a definite goal, diversionary tactics involve assaults on other non-target data caches, including those of the average citizen. During a digital assault no one is safe."]
+["drone riots", "Drone Riot: Something has caused synthetics, androids and robots to go haywire.  They may have been hacked; it could be a coding bug, or possibly some sort of AI event.  Whatever the cause, automatons are running riot in the streets. This creates all manner of distractions."],
+["hackwars", "Hackwar: The network in this area is currently under attack. This is not the malware that infests corrupted zones; this is a dedicated and strategic assault with a clear goal. Often this takes the form of attempts to hack into servers and other data caches and scoop out the juicy data inside. While the attack has a definite goal, diversionary tactics involve assaults on other non-target data caches, including those of the average citizen. During a digital assault no one is safe."]
 ];
 
 var whens0 = [
-["protests", -1, "Protest: The streets here are filled with people protesting some offense. Protests are usually allowed to carry on as a means of releasing pent up tensions, a means of identifying leaders of opposition groups, or a bit of street theatre when the cops come in and start a crackdown. At times local government might be so apathetic they allow a protest to carry on. Then again, maybe the leaders here the voice of the people and are motivated to action.  Protesters tend to focus on what they are doing, and bystanders tend to watch the protest. Expect crowds, noise, and signage being carried along. Merging with the protest can be a fine way to lose a tail or move unnoticed."],
-["civil unrests", 0, "Civil Unrest: This area has become a hotbed of political resistance, making social interactions tense, and the locals sensitive to careless speech. Peaceful protest is possible, but violence on both sides can flare up at any time if someone makes a wrong move."]
+["protests", "Protest: The streets here are filled with people protesting some offense. Protests are usually allowed to carry on as a means of releasing pent up tensions, a means of identifying leaders of opposition groups, or a bit of street theatre when the cops come in and start a crackdown. At times local government might be so apathetic they allow a protest to carry on. Then again, maybe the leaders here the voice of the people and are motivated to action.  Protesters tend to focus on what they are doing, and bystanders tend to watch the protest. Expect crowds, noise, and signage being carried along. Merging with the protest can be a fine way to lose a tail or move unnoticed."],
+["civil unrests", "Civil Unrest: This area has become a hotbed of political resistance, making social interactions tense, and the locals sensitive to careless speech. Peaceful protest is possible, but violence on both sides can flare up at any time if someone makes a wrong move."]
 ];
 
 var whens1 = [
-["riots", 1, "Riot: People yell, windows crack, and stones are thrown. This zone is undergoing a large civil disturbance, not just merely unrest but outright violence. The people of this zone have taken to the streets to vent their anger and frustration. Strangers are unwelcome and possibly targets unless they can prove they are there as allies and reinforcements. The police are surely on their way and a crackdown will certainly occur in the near future."],
-["martial laws", 1, "Martial Law: This area is under martial law for some reason or another. Inevitably, heightened security means curtailed freedoms, which can prove inconvenient at the very least. There’s always a cop around, even if you don’t need one. Regular patrol sweeps are carried out by soldiers and observation drones, and they are always on the lookout for any sign of trouble."]
+["riots", "Riot: People yell, windows crack, and stones are thrown. This zone is undergoing a large civil disturbance, not just merely unrest but outright violence. The people of this zone have taken to the streets to vent their anger and frustration. Strangers are unwelcome and possibly targets unless they can prove they are there as allies and reinforcements. The police are surely on their way and a crackdown will certainly occur in the near future."],
+["martial laws", "Martial Law: This area is under martial law for some reason or another. Inevitably, heightened security means curtailed freedoms, which can prove inconvenient at the very least. There’s always a cop around, even if you don’t need one. Regular patrol sweeps are carried out by soldiers and observation drones, and they are always on the lookout for any sign of trouble."]
 ];
 
 var whens2 = [
-["crackdowns", 2, "Crackdown: The police have been called in and have arrived in force. It is not quite open warfare, but it is pretty close. Officers are stationed at every street corner, APCs armed with crowd control weapons are deployed on major roads, and command centers complete with pre-fabricated detention pens have been erected. Usually the police come in on one edge of the area, establish a fortified beachhead, and start sweeping building to building. They are not just in the streets; they are entering buildings and pulling people out. Anyone seen in the area is likely to be stopped, disarmed, and interrogated. The unlucky are sent to a detention pen for further processing."],
-["restrictions", 2, "Restriction: This zone is under stricter controls than martial law. Tensions are high, and the local law enforcement is on heightened alert for any trouble. Stop and frisks are common, those entering who are not familiar to the local beat cops or who look like possible threats will have their papers checks and their purposes questioned. Regular random sweeps by heavily armed law enforcement officers round up any on the streets and bring them in for processing, questioning, and some light civil rights violating. A strict curfew is in place and anyone on the streets after dark is likely to get arrested.  Restrictions are usually enacted to avert the risk of riots or other civil unrest."]
+["crackdowns", "Crackdown: The police have been called in and have arrived in force. It is not quite open warfare, but it is pretty close. Officers are stationed at every street corner, APCs armed with crowd control weapons are deployed on major roads, and command centers complete with pre-fabricated detention pens have been erected. Usually the police come in on one edge of the area, establish a fortified beachhead, and start sweeping building to building. They are not just in the streets; they are entering buildings and pulling people out. Anyone seen in the area is likely to be stopped, disarmed, and interrogated. The unlucky are sent to a detention pen for further processing."],
+["restrictions", "Restriction: This zone is under stricter controls than martial law. Tensions are high, and the local law enforcement is on heightened alert for any trouble. Stop and frisks are common, those entering who are not familiar to the local beat cops or who look like possible threats will have their papers checks and their purposes questioned. Regular random sweeps by heavily armed law enforcement officers round up any on the streets and bring them in for processing, questioning, and some light civil rights violating. A strict curfew is in place and anyone on the streets after dark is likely to get arrested.  Restrictions are usually enacted to avert the risk of riots or other civil unrest."]
 ];
 
 var whenx0 = [
-["pollutions", 1, "Pollution: This area is particularly polluted, and unhealthy for those who live or travel in the area.  Conditions are very unsanitary."],
-["brownouts", 0, "Brownout: This area has problems with its power grid, making anything requiring electricity a bit unreliable.  Charging stations are hard to come by, and power may be lost for hours at a time."]
+["pollutions", "Pollution: This area is particularly polluted, and unhealthy for those who live or travel in the area.  Conditions are very unsanitary."],
+["brownouts", "Brownout: This area has problems with its power grid, making anything requiring electricity a bit unreliable.  Charging stations are hard to come by, and power may be lost for hours at a time."]
 ];
 
 var whenx1 = [
-["quarantines", 2, "Quarantine: This area has had a major outbreak of some superbug strain of disease or virus which resulted in the area becoming quarantined. This area is very dangerous to the health of individuals traveling or living in the area.  All unprotected creatures in the area are assumed to be infected, and law enforcement will become hostile if you do not obey commands."],
-["famines", 0, "Famine: This area has a severe food shortage, which has resulted in hostility and desperation among the populace.  Mobs of starving locals may riot at any time."]
+["quarantines", "Quarantine: This area has had a major outbreak of some superbug strain of disease or virus which resulted in the area becoming quarantined. This area is very dangerous to the health of individuals traveling or living in the area.  All unprotected creatures in the area are assumed to be infected, and law enforcement will become hostile if you do not obey commands."],
+["famines", "Famine: This area has a severe food shortage, which has resulted in hostility and desperation among the populace.  Mobs of starving locals may riot at any time."]
 ];
 
 var whenx2 = [
-["disasters", 1, "Disaster: Something bad is happening here. It might be a wildfire, building collapse, or toxic leak. The area is hazardous and if of high enough security level, emergency response is either en route or already on site. Outsiders are turned away at the edges of the zone, looters are likely out in force, and the police take a dim view on anyone disrupting the work of the emergency response teams.  Protective gear is suggested."],
-["blockades", 2, "Blockaded: This area is restricted, and anyone without proper authorization is not allowed in (or is only allowed in a very limited area).  Enforcement is aggressive and constant."]
+["disasters", "Disaster: Something bad is happening here. It might be a wildfire, building collapse, or toxic leak. The area is hazardous and if of high enough security level, emergency response is either en route or already on site. Outsiders are turned away at the edges of the zone, looters are likely out in force, and the police take a dim view on anyone disrupting the work of the emergency response teams.  Protective gear is suggested."],
+["blockades", "Blockaded: This area is restricted, and anyone without proper authorization is not allowed in (or is only allowed in a very limited area).  Enforcement is aggressive and constant."]
 ];
 
 function shuffle(a) {
@@ -294,12 +294,12 @@ function job(foo, bar, xyz){
 	var jtop = "<p>Employer: ";
 	var jdata = "<font size=2>";
 
-	if(foo==0 && bar==0){jtop+=whoc0[0][0];jdata+="<li>"+whoc0[0][2];}
-	if(foo==0 && bar==1){jtop+=whoc1[0][0];jdata+="<li>"+whoc1[0][2];}
-	if(foo==0 && bar==2){jtop+=whoc2[0][0];jdata+="<li>"+whoc2[0][2];}
-	if(foo==1 && bar==0){jtop+=whos0[0][0];jdata+="<li>"+whos0[0][2];}
-	if(foo==1 && bar==1){jtop+=whos1[0][0];jdata+="<li>"+whos1[0][2];}
-	if(foo==1 && bar==2){jtop+=whos2[0][0];jdata+="<li>"+whos2[0][2];}
+	if(foo==0 && bar==0){jtop+=whoc0[0][0];jdata+="<li>"+whoc0[0][1];}
+	if(foo==0 && bar==1){jtop+=whoc1[0][0];jdata+="<li>"+whoc1[0][1];}
+	if(foo==0 && bar==2){jtop+=whoc2[0][0];jdata+="<li>"+whoc2[0][1];}
+	if(foo==1 && bar==0){jtop+=whos0[0][0];jdata+="<li>"+whos0[0][1];}
+	if(foo==1 && bar==1){jtop+=whos1[0][0];jdata+="<li>"+whos1[0][1];}
+	if(foo==1 && bar==2){jtop+=whos2[0][0];jdata+="<li>"+whos2[0][1];}
 
 	if(bar==0){jtop+=" "+whox0[xyz];}
 	if(bar==1){jtop+=" "+whox1[xyz];}
@@ -307,41 +307,41 @@ function job(foo, bar, xyz){
 
 	jtop+="<br>Meet site: ";
 
-	if(foo==0 && bar==0){jtop+=wherec0[0][0];jdata+="<li>"+wherec0[0][2];}
-	if(foo==0 && bar==1){jtop+=wherec0[2][0];jdata+="<li>"+wherec0[2][2];}
-	if(foo==0 && bar==2){jtop+=wherec0[1][0];jdata+="<li>"+wherec0[1][2];}
-	if(foo==1 && bar==0){jtop+=wheres0[0][0];jdata+="<li>"+wheres0[0][2];}
-	if(foo==1 && bar==1){jtop+=wheres0[2][0];jdata+="<li>"+wheres0[2][2];}
-	if(foo==1 && bar==2){jtop+=wheres0[1][0];jdata+="<li>"+wheres0[1][2];}
+	if(foo==0 && bar==0){jtop+=wherec0[0][0];jdata+="<li>"+wherec0[0][1];}
+	if(foo==0 && bar==1){jtop+=wherec0[2][0];jdata+="<li>"+wherec0[2][1];}
+	if(foo==0 && bar==2){jtop+=wherec0[1][0];jdata+="<li>"+wherec0[1][1];}
+	if(foo==1 && bar==0){jtop+=wheres0[0][0];jdata+="<li>"+wheres0[0][1];}
+	if(foo==1 && bar==1){jtop+=wheres0[2][0];jdata+="<li>"+wheres0[2][1];}
+	if(foo==1 && bar==2){jtop+=wheres0[1][0];jdata+="<li>"+wheres0[1][1];}
 
 	jtop+="<br>Job site: ";
 
-	if(foo==0 && bar==0){jtop+=wherec0[1][0];jdata+="<li>"+wherec0[1][2];}
-	if(foo==0 && bar==1){jtop+=wherec1[1][0];jdata+="<li>"+wherec1[1][2];}
-	if(foo==0 && bar==2){jtop+=wherec2[1][0];jdata+="<li>"+wherec2[1][2];}
-	if(foo==1 && bar==0){jtop+=wheres0[1][0];jdata+="<li>"+wheres0[1][2];}
-	if(foo==1 && bar==1){jtop+=wheres1[1][0];jdata+="<li>"+wheres1[1][2];}
-	if(foo==1 && bar==2){jtop+=wheres2[1][0];jdata+="<li>"+wheres2[1][2];}
+	if(foo==0 && bar==0){jtop+=wherec0[1][0];jdata+="<li>"+wherec0[1][1];}
+	if(foo==0 && bar==1){jtop+=wherec1[1][0];jdata+="<li>"+wherec1[1][1];}
+	if(foo==0 && bar==2){jtop+=wherec2[1][0];jdata+="<li>"+wherec2[1][1];}
+	if(foo==1 && bar==0){jtop+=wheres0[1][0];jdata+="<li>"+wheres0[1][1];}
+	if(foo==1 && bar==1){jtop+=wheres1[1][0];jdata+="<li>"+wheres1[1][1];}
+	if(foo==1 && bar==2){jtop+=wheres2[1][0];jdata+="<li>"+wheres2[1][1];}
 
 	if(Math.floor(Math.random() * 10)<basecr){
 
 	jtop+="<br>Local conditions: ";
 
-	if(foo==0 && bar==0){jtop+=whenc0[1][0];jdata+="<li>"+whenc0[1][2];}
-	if(foo==0 && bar==1){jtop+=whenc1[1][0];jdata+="<li>"+whenc1[1][2];}
-	if(foo==0 && bar==2){jtop+=whenc2[1][0];jdata+="<li>"+whenc2[1][2];}
-	if(foo==1 && bar==0){jtop+=whens0[1][0];jdata+="<li>"+whens0[1][2];}
-	if(foo==1 && bar==1){jtop+=whens1[1][0];jdata+="<li>"+whens1[1][2];}
-	if(foo==1 && bar==2){jtop+=whens2[1][0];jdata+="<li>"+whens2[1][2];}
+	if(foo==0 && bar==0){jtop+=whenc0[1][0];jdata+="<li>"+whenc0[1][1];}
+	if(foo==0 && bar==1){jtop+=whenc1[1][0];jdata+="<li>"+whenc1[1][1];}
+	if(foo==0 && bar==2){jtop+=whenc2[1][0];jdata+="<li>"+whenc2[1][1];}
+	if(foo==1 && bar==0){jtop+=whens0[1][0];jdata+="<li>"+whens0[1][1];}
+	if(foo==1 && bar==1){jtop+=whens1[1][0];jdata+="<li>"+whens1[1][1];}
+	if(foo==1 && bar==2){jtop+=whens2[1][0];jdata+="<li>"+whens2[1][1];}
 	}
 
 	if(Math.floor(Math.random() * 20)<basecr){
 
 	jtop+="<br>General conditions: ";
 
-	if(foo==0){jtop+=whenx0[1][0];jdata+="<li>"+whenx0[1][2];}
-	if(foo==1){jtop+=whenx1[1][0];jdata+="<li>"+whenx1[1][2];}
-	if(foo==2){jtop+=whenx2[1][0];jdata+="<li>"+whenx2[1][2];}
+	if(foo==0){jtop+=whenx0[1][0];jdata+="<li>"+whenx0[1][1];}
+	if(foo==1){jtop+=whenx1[1][0];jdata+="<li>"+whenx1[1][1];}
+	if(foo==2){jtop+=whenx2[1][0];jdata+="<li>"+whenx2[1][1];}
 	}
 
 	jtop+="<br>POI: ";
@@ -435,6 +435,18 @@ shuffle(whox2);
 	job(1,1,1);
 	jobbies+="</td><td bgcolor='#F9EBEA'>";
 	job(1,2,1);
+
+jobbies+="</tr><tr><td><li>"+whoc0.join("</li><li>")+"</td><td><li>"+whoc1.join("</li><li>")+"</td><td><li>"+whoc2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+whos0.join("</li><li>")+"</td><td><li>"+whos1.join("</li><li>")+"</td><td><li>"+whos2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+whox0.join("</li><li>")+"</td><td><li>"+whox1.join("</li><li>")+"</td><td><li>"+whox2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+wherec0.join("</li><li>")+"</td><td><li>"+wherec1.join("</li><li>")+"</td><td><li>"+wherec2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+wheres0.join("</li><li>")+"</td><td><li>"+wheres1.join("</li><li>")+"</td><td><li>"+wheres2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+verb0.join("</li><li>")+"</td><td><li>"+verb1.join("</li><li>")+"</td><td><li>"+verb2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+noun0.join("</li><li>")+"</td><td><li>"+noun1.join("</li><li>")+"</td><td><li>"+noun2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+whenc0.join("</li><li>")+"</td><td><li>"+whenc1.join("</li><li>")+"</td><td><li>"+whenc2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+whens0.join("</li><li>")+"</td><td><li>"+whens1.join("</li><li>")+"</td><td><li>"+whens2.join("</li><li>")+"</td><td>";
+jobbies+="</tr><tr><td><li>"+whenx0.join("</li><li>")+"</td><td><li>"+whenx1.join("</li><li>")+"</td><td><li>"+whenx2.join("</li><li>")+"</td><td>";
+
 	jobbies+="</tr></table>";
 
 	document.getElementById("jobbies").innerHTML = jobbies;
